@@ -1,0 +1,391 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    font-family: "Avenir", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: #05202B url(../img/big_main_bg.png)  center center;
+    /* 全局大背景  */
+    background-size: 100%;
+}
+
+#app {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    color: #fff;
+    background: url(../img/duduniubg.jpg) no-repeat center top;
+    /* 正文背景  */
+    background-size: cover;
+    min-height: 640px;
+    overflow: hidden;
+}
+.el-loading-mask{
+    background: rgba(0, 0, 0, 0.4) !important;
+}
+.page-section{
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 84%;  
+}
+.left {
+    width: 190px;
+    border-right: 1px solid #051d27;
+    position: relative;
+    
+}
+
+.left .hd {
+    background: url(../img/titlebg24.png) no-repeat left 10px;
+    /* 左侧标题  */
+    height: 40px;
+    
+    margin-bottom: 10px;
+}
+
+.left .hd a{
+    text-decoration: none;
+    background: -webkit-linear-gradient(top,#f5cd61 20%, #5e4709 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    display: block;
+    padding-top: 8px;
+    padding-left: 32px;
+    width: 100%;
+    white-space: nowrap;
+    text-overflow: clip;
+    overflow: hidden;
+    font: 14px Microsoft YaHei,微软雅黑, 黑体;
+    font-weight: bold;
+}
+@media screen and(-ms-high-contrast:active),(-ms-high-contrast:none){
+	/*兼容IE11*/
+	.left .hd a {
+        color:#967a2d;
+    }
+}
+ul {
+    list-style: none;
+}
+.left ul{
+  padding-left: 20px
+}
+.left .q-link{
+    text-decoration: none !important;
+    color: #4a525b;
+    font-size: 12px;
+    line-height: 35px;
+    display: block;
+}
+.left li a{
+    text-decoration: none;
+    color: #4a525b;
+    font-size: 12px;
+    line-height: 35px;
+    display: block;
+}
+.left li img,.left .q-link img{
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    border-radius: 3px;
+    margin-right: 7px;
+}
+/* .left .active{
+    background: url(../img/treeonbg.jpg) no-repeat left center;
+    height: 36px;
+    width: 180px;
+} */
+.left .active a{
+    color: #c5a265;
+}
+/* 左侧底部 */
+.contact{
+    margin-top: 30px;
+    width: 190px;
+    color: #76898f;
+    border-top: 1px solid #1b333b;
+    height: 40px;
+    line-height: 40px;
+    position: relative;
+    box-sizing: border-box;
+    left: 1px;
+    text-align: center;
+    font-size: 14px;
+    background: url(../img/treebg24.png) no-repeat 14px -1082px;
+}
+.contact .box div{
+    cursor: pointer;
+}
+.box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    border-top: 1px solid #061b22;
+}
+.box div{
+    flex: 1;
+    border-top: 1px solid #1b333b;
+    border-right: 1px solid #061b22;
+    padding-top: 35px;
+}
+.box div:first-child{
+    background: url(../img/treebg24.png) no-repeat 34px -1144px;
+}
+.box div:last-child{
+    background: url(../img/treebg24.png) no-repeat 34px -1212px;
+}
+.links{
+    color: #76898f;
+    text-decoration: none;
+}
+/* 右侧 */
+
+.main {
+    position: relative;
+    padding-right: 10px;
+    padding-top: 10px;
+}
+
+.right {
+    flex: 1;
+    padding-left: 10px;
+
+}
+
+.carousel {
+    width: 100%;
+    position: relative;
+    height: 206px;
+}
+
+.banner {
+    width: 100%;
+}
+.banner img {
+    width: 100%;
+    height: 206px !important;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.fade-enter-active, .fade-leave-active {
+    transition: opacity .5s;
+  }
+.fade-enter, .fade-leave-to {
+opacity: 0;
+}
+.tips-dot{
+    position: absolute;
+    width: 50%;
+    text-align: center;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 100;
+}
+.tips-dot span{
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background: #fff;
+    border-radius: 50%;
+    margin: 0 4px;
+}
+.tips-dot .active{
+    background: #ff9900;
+}
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+.content img{
+    width: 100%;
+    margin: 0 7px;
+    
+}
+.content img:first-child{
+    margin-left: 0;
+}
+.content img:last-child{
+    margin-right: 0;
+}
+/* 特价 & 热门 */
+.wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+.recommend {
+    flex: 1;
+    margin-top: 10px;
+}
+.recommend .hd {
+    background: url(../img/titlebg24.png) no-repeat left -55px;
+    width: 100%;
+    height: 25px;
+    border-bottom: 1px solid #1e3640;
+}
+.rec{
+    margin-top: 3px;
+    margin-bottom: 5px;
+    background: #072a37;
+    border: 1px solid #1e3640;
+    padding: 10px 0 20px 40px;
+    max-height: 290px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+}
+/* item */
+.item{
+    width:220px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 15px;
+    position: relative;
+    align-self: flex-start;
+    flex-grow: 0;  
+}
+.item img{
+    width: 60px;
+    height: 60px;
+    border-radius: 7px;
+    margin-right: 15px;
+}
+.info div:first-child{
+    font-size: 14px;
+    color: #4a525b;
+}
+.info div:nth-child(2) span:first-child{
+    color: #c8b283;
+    font-size: 18px;
+}
+.info div:nth-child(2) span:last-child{
+    font-size: 14px;
+    color: #4a525b;
+    text-decoration: line-through;
+}
+.info div{
+    line-height: 1.5;
+}
+.info .buy{
+    border: 1px solid #c8b283;
+    color: #c8b283;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 5px;
+    width: 40px;
+    cursor: pointer;
+}
+.discount{
+    position: absolute;
+    top: 0;
+    left: 30px;
+    background: #ffa800;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 12px;
+    padding: 0 5px;
+}
+/* 热门 */
+.hot{
+    margin-top: 10px;
+    width: 245px;
+    margin-left: 20px;
+    margin-right: 10px;
+}
+.hot .hd {
+    background: url(../img/titlebg24.png) no-repeat left -110px;
+    width: 100%;
+    height: 25px;
+    border-bottom: 1px solid #1e3640;
+}
+.hot-bg{
+    margin-top: 3px;
+    background: rgba(7, 42, 55, 0.473);
+    border: 1px solid #1e3640;
+    padding: 10px 20px;
+    font-size: 12px;
+    color: #7c8591;
+    padding-bottom: 45px;
+}
+.hot-bg li{
+    line-height: 3;
+    padding-left: 40px;
+    position: relative;
+    cursor: pointer;
+}
+.hot-bg li:nth-child(1){
+    background: url(../img/treebg24.png) no-repeat left -938px;
+}
+.hot-bg li:nth-child(2){
+    background: url(../img/treebg24.png) no-repeat left -968px;
+}
+.hot-bg li:nth-child(3){
+    background: url(../img/treebg24.png) no-repeat left -1000px;
+}
+.hot-bg .tag{
+    display: inline-block;
+    background: #999999;
+    margin-left: -33px;
+    width: 15px;
+    height: 15px;
+    border-radius: 2px;
+    text-align: center;
+    line-height: 15px;
+    color: #333333;
+    margin-right: 18px;
+}
+.dis{
+    position: absolute;
+    right: 0px;
+    top: 8px;
+    padding: 2px 4px;
+    background: #ffa800;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 12px;
+    line-height: initial;
+}
+
+/*  */
+.from-ctrl{
+    padding: 0 20px 10px;
+    border-bottom: 1px solid #1c2a32;
+    display: flex;
+    align-items: center;
+}
+
+/* login */
+.modal-wparpper {
+    width: 400px;
+    height: 300px;
+    position: fixed;
+    padding: 20px;
+    border: 1px solid #c5a265;
+    box-sizing: border-box;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 160px;
+    z-index: 1001;
+    background: url(../img/duduniubg.jpg) no-repeat;
+    background-size: 100% 100%;
+    text-align: center;
+  }
